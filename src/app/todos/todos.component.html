@@ -1,0 +1,9 @@
+  <h3>List TODO</h3>
+  <div *ngFor="let item of fa.controls; let i = index" class="todo-list">
+    <b class="index">{{i + 1}}</b>
+    <app-todo [formGroup]="item"></app-todo>
+  </div>
+  <!--<div *ngFor="let item of fg.controls; let i = index" class="todo-list">-->
+  <!--<b class="index">{{i + 1}}</b>-->
+  <!--<app-todo [formControlName]="item"></app-todo>-->
+  <!--</div>-->

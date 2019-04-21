@@ -1,0 +1,8 @@
+.todo-list {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.todo-list .index {
+  margin: 0 10px;
+}
