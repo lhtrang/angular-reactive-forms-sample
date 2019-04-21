@@ -34,6 +34,7 @@ export class AppComponent implements OnInit {
         })
       ]),
       description: ['ahihi'],
+      checked: [true]
     });
   }
 }

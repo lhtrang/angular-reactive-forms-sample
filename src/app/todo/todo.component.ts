@@ -28,7 +28,7 @@ export class TodoComponent extends ControlValueAccessorBase<any> implements OnIn
 
   ngOnInit() {
     console.log(this.fd.form);
-   // this.fg = this.fd.form;
+    this.fg = this.fd.form;
   }
 
   public writeValue(val: any): void {
