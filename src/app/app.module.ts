@@ -6,7 +6,8 @@ import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todo/todo.component';
 import { DescriptionComponent } from './description/description.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import {InputSwitchModule} from "primeng/primeng";
+import {CalendarModule, InputSwitchModule} from "primeng/primeng";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,8 @@ import {InputSwitchModule} from "primeng/primeng";
   imports: [
     BrowserModule,
     InputSwitchModule,
+    CalendarModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule
   ],
   providers: [],
