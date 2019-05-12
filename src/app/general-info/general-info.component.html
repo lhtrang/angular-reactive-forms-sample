@@ -1,0 +1,10 @@
+<ng-container [formGroup]="controlContainer.control">
+  <h3>General info</h3>
+  <div>Full name</div>
+  <input formControlName="fullName"/>
+  <div>Address</div>
+  <input formControlName="address"/>
+  <div>Date of birth</div>
+  <input formControlName="dateOfBirth" type="date"/>
+  <app-phone-info formGroupName="phoneInfo"></app-phone-info>
+</ng-container>

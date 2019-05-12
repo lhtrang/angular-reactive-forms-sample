@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,35 +7,26 @@ import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  myToDoGroup: FormGroup;
+  employeeFormGroup: FormGroup;
 
   ngOnInit(): void {
-    this.myToDoGroup.valueChanges.subscribe((value) => {
-      console.log('app', value);
+    this.employeeFormGroup.valueChanges.subscribe(() => {
+      console.log('app', this.employeeFormGroup.getRawValue());
     });
   }
 
-  constructor(
-    private fb: FormBuilder,
-  ) {
-    this.myToDoGroup = this.fb.group({
-      todo: this.fb.group({
-        date: new FormControl('1888-07-07'),
-        text: new FormControl('outside')
-      }),
-      todos: this.fb.array([
-        this.fb.group({
-          date: [new Date()],
-          text: ['text 1']
-        }),
-        this.fb.group({
-          date: ['1234-07-07'],
-          text: ['text 2']
+  constructor(private formBuilder: FormBuilder) {
+    this.employeeFormGroup = this.formBuilder.group({
+      generalInfo: this.formBuilder.group({
+        fullName: ['Trang Le'],
+        address: ['Ho Chi Minh City, Viet Nam'],
+        dateOfBirth: ['1888-07-07'],
+        phoneInfo: this.formBuilder.group({
+          mobilePhone: ['+84981111111'],
+          homePhone: ['+84982222222']
         })
-      ]),
-      description: ['ahihi'],
-      checked: [true],
-      date: [new Date()]
+      }),
+      emergencyContacts: this.formBuilder.array([['+84983333333'], ['+84984444444']])
     });
   }
 }

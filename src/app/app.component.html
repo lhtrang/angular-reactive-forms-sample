@@ -1,8 +1,6 @@
-<form [formGroup]="myToDoGroup">
-  <h1>Nested reactive form</h1>
-  <app-description formControlName="description"></app-description>
-  <!--<app-todo formControlName="todo"></app-todo>-->
-  <app-todos></app-todos>
-  <p-inputSwitch formControlName="checked"></p-inputSwitch>
-  <p-calendar formControlName="date"></p-calendar>
+<h1>Nested reactive form</h1>
+<h2>Employee Info</h2>
+<form [formGroup]="employeeFormGroup">
+  <app-general-info formGroupName="generalInfo"></app-general-info>
+  <app-emergency-contacts formArrayName="emergencyContacts"></app-emergency-contacts>
 </form>
