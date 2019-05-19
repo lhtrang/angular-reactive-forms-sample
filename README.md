@@ -1,19 +1,6 @@
 # Note
-##Control value accessor - CVA
-###Pros
-Simple to bind data, just use formControlName directive.
-###Cons
-Initial data??
-Component handle value changes by itself. Cause different formGroup instance.
-Error control.registerOnChange is not a function, since it is just for FormControl
-##Normal coding
-###Pros
-Track change in 1 place.
-No error throw.
-Simple access, based on FormGroup name to get child FormGroup
-###Cons
-2 attribute for binding??
-
+Angular nested forms example with ControlContainer.
+[Blog link](https://medium.com/@tranglh/angular-reactive-forms-how-to-structure-your-nested-forms-7dcfd487c6b3?source=friends_link&sk=b90b8a87f8b0e0247079075c761de767)
 # AngularReactiveFormsSample
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
