@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {CalendarModule, InputSwitchModule} from 'primeng/primeng';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {GeneralInfoComponent} from './general-info/general-info.component';
 import {PhoneInfoComponent} from './phone-info/phone-info.component';
